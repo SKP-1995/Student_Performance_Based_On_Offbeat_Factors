@@ -17,6 +17,7 @@ class DataTransformationConfig:
     preprocessor_obj_file_path=os.path.join('artifacts',"preprocessor.pkl")
 
 class DataTransformation :
+
     def __init__(self):
         self.data_transformation_config=DataTransformationConfig()
 
@@ -54,6 +55,7 @@ class DataTransformation :
         
         except Exception as e:
             raise CustomException(e,sys)
+
     def initiate_data_transformation(self,train_path,test_path):
         try:
             train_df=pd.read_csv(train_path)
@@ -95,4 +97,4 @@ class DataTransformation :
             )
 
         except Exception as e:
-            raise CustomException(e,sys)        
+            raise CustomException(e,sys)
